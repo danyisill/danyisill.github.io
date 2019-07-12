@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TF2 Colorizer</title>
+	<meta charset="utf-8">
+	<style>
+		body{
+			font-family: sans-serif;
+		}
+		#editor{
+			color: white;
+			background: darkgray;
+			height: 200px;
+			width: 600px;
+			font-family: "Verdana";
+			font-size: large;
+			text-shadow: black 1px 1px;
+			-webkit-font-smoothing: none;
+		}
+		#editor:empty:not(:focus):before{
+			content: "Выдели текст чтобы покрасить его";
+		}
+		textarea{
+			width: 600px;
+			height: 150px;
+			box-sizing: border-box;
+		}
+		.picker{
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+<h1>TF2 Colorizer</h1>
+<h2>Структура: ␇FF00FFfoobar␁</h2>
+<h2>Редактор:</h2>
+Цвет: <input class="jscolor" value="ab2567">
+<div contenteditable id="editor"></div>
+<h2>что скопировать (Нажать на коробку, Ctrl + A &amp; Ctrl + C)</h2>
+<textarea></textarea>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.min.js"></script>
+<script>
+
+document.addEventListener('click', () => {
+	if(getSelection().type == "Range"){
+		document.execCommand('foreColor', true, document.querySelector('input').value);
+		document.querySelector('textarea').value = document.getElementById('editor').innerHTML.replace(/#....../g, m => m.toUpperCase()).replace(/">/g, '').replace(/<font color="#/g, '').replace(/<\/font>/g, '')
+	}
+})
+</script>
+</body>
+</html>

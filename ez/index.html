@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyRPG wrappers for Mac</title>
+	<style>
+		ol > li{
+			list-style-type: none;
+		}
+		ol > li:before{
+			content: "v";
+		}
+		.lang{
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+<h1>EasyRPG wrappers for Mac</h1>
+<h2>EasyRPG version: 0.6.1</h2>
+<ul>
+	<li>ゆめにっき Yume Nikki
+		<ol>
+			<li>0.04
+				<ul>
+					<li>ja: <a href="#">.tar.gz</a> | <a href="#">.dmg</a></li>
+				</ul>
+			</li>
+			<li>0.06
+				<ul>
+					<li>ja: <a href="#">.tar.gz</a> | <a href="#">.dmg</a></li>
+				</ul>
+			</li>
+			<li>0.09
+				<ul>
+					<li>ja: <a href="#">.tar.gz</a> | <a href="#">.dmg</a></li>
+				</ul>
+			</li>
+			<li>0.10a
+				<ul>
+					<li>ja: <a href="#">.tar.gz</a> | <a href="#">.dmg</a> (playism ver)</li>
+					<li>en: <a href="#">.tar.gz</a> | <a href="#">.dmg</a></li>
+				</ul>
+			</li>
+		</ol>
+	</li>
+	<li>OFF
+		<ul>
+			<li>fr: <a href="#">.tar.gz</a> | <a href="#">.dmg</a></li>
+			<li>en: <a href="#">.tar.gz</a> | <a href="#">.dmg</a> (3.0)</li>
+			<li>ru: <a href="#">.tar.gz</a> | <a href="#">.dmg</a></li>
+			<li>pl: <a href="#">.tar.gz</a> | <a href="#">.dmg</a> (1.2)</li>
+		</ul>
+	</li>
+	<li>.flow
+		<ol>
+			<li>0.194
+				<ul>
+					<li>ja: <a href="#">.tar.gz</a> | <a href="#">.dmg</a></li>
+					<li>en: <a href="#">.tar.gz</a> | <a href="#">.dmg</a></li>
+				</ul>
+			</li>
+		</ol>
+	</li>
+	<li>Fleshchild
+		<ol>
+			<li>0.02
+				<ul>
+					<li>en: <a href="#">.tar.gz</a> | <a href="#">.dmg</a></li>
+				</ul>
+			</li>
+		</ol>
+	</li>
+</ul>
+<p><a href="fabs.sh">Fully Automated Build Script</a> (requires imagemagick, icoutils and easyrpg-player in $PATH)</p>
+<p>If you'd like your game taken off here/put on here/report a bug/etc create a pull request or open an issue @ <a href="https://github.com/danyisill/danyisill.github.io">https://github.com/danyisill/danyisill.github.io</a></p>
+<script>
+	if(typeof document.querySelectorAll == 'function')
+		document.querySelectorAll(`a[href^="${navigator.languages[0].slice(-2).toLowerCase()}"]`).forEach(e => e.className = 'lang')
+</script>
+</body>
+</html>

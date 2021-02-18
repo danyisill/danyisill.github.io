@@ -3,21 +3,20 @@
 <head>
 	<title>My 🅱️io</title>
 	<style>
-		@media (min-aspect-ratio: 4/3) {
-			body{
-				column-count: 3;
-				width: 80vw;
-				font-size: x-large;
-			}
-		}
-		@media (max-aspect-ratio: 4/3) {
-			body{
-				column-count: 2;
-				font-size: xx-large;
-			}
-		}
 		body{
-			margin: auto
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-content: flex-start;
+		}
+		ul{
+			margin: 0
+		}
+		body, head{
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			width: 100vw;
 		}
 	</style>
 </head>
@@ -54,11 +53,13 @@
 		<li>Brutalist Architecture</li>
 		<li>Continental Philosophy</li>
 		<li>Communism</li>
+		<li>Cooking</li>
 		<li>Pharmacology</li>
 		<li>Synthetic Drugs</li>
 		<li>Research Chemicals</li>
 		<li>Extreme Music</li>
 		<li>Feminism</li>
+		<li>Linguistics</li>
 		<li>Open Source Software</li>
 		<li>Plan 9, suckless</li>
 		<li>Mathematics</li>

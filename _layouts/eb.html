@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ page.title }}</title>
+	<link rel="stylesheet" href="/css/eb.css">
+</head>
+<body>
+<img src="/img/ness4.png" id="ness">
+<div id="rootb">
+	<div class="box" id="money">
+		<img src="/img/$.png">
+	</div>
+	<div class="box" id="na">
+{{ "[Talk to](#) 
+[PSI](#) [Check](#) [Goods](#) [Equip](#) [Status](#)" | markdownify | remove: '<p>' | remove: '</p>' }}
+	</div>
+	<div class="box sub" id="talk">
+{{ "- My Interests:
+- Furry
+- Postmodernism
+- Synthetic Drugs
+- Continental Philosophy
+- Communism
+- [\>\>](#)
+^
+- Cooking
+- Pharmacology
+- Brutalist Architecture
+- Research Chemicals
+- Extreme Music
+- Feminism
+- Linguistics
+- [\>\>](#)
+^
+- Open Source Software
+- Plan 9, suckless
+- Mathematics
+- Tetris
+- TF2
+- Geography, climate
+- 
+- [\>\>](#)" | markdownify }}
+	</div>
+	<div class="box sub" id="goods">
+{{ "- Projects:
+- [Simp'O'Matic, a multipurpose Discord bot](https://github.com/Demonstrandum/Simp-O-Matic)
+- [EasyRPG .app bundles](ez)
+- [Lovejoy Programming Language](https://lovejoy-lang.github.io/)
+- 
+- [\>\>](#)
+^
+- Inventory:
+- Bag of meth
+- iPhone 6s 16gb
+- Nintendo DSi
+- Karelia Filtro
+- Monster Energy Mango Loco
+- [\>\>](#)" | markdownify}}
+	</div>
+	<div class="box sub" id="psi">
+{{ "- My Mental Illnesses:
+- Schizoid Personality Disorder
+- ADHD
+- Drug Addiction
+- DP/DR
+- PTSD
+- Visual Snow
+" | markdownify}}
+	</div>
+	<div class="box sub" id="status">
+{{ "- Age: 18
+- Gender: agender/genderfluid male
+- Horoscope: Leo
+- Pronouns: he/him, they/them
+- Sexuality: asexual
+- I Live In: Athens, Attica, Greece
+- Romantic Orientation: demiromantic" | markdownify }}
+	</div>
+	<div class="box sub" id="equip">
+{{ "- Languages Spoken:
+- English: idk
+- Russian: N
+- Greek: B1
+- Spanish: A1
+" | markdownify}}
+	</div>
+<div class="box sub" id="check">
+{{ " - [RateYourMusic - ~mudkip77](https://rateyourmusic.com/~mudkip77)
+- [Reddit - danyisill](https://old.reddit.com/u/danyisill)
+- [Twitter - danyisill](https://twitter.com/danyisill)
+- Discord - pm to ask
+- [GitHub - danyisill](https://github.com/danyisill)
+- [Telegram - @p_9_6](https://t.me/p_9_6)
+- [FurAffinity - danyisill](https://furaffinity.net/user/danyisill)
+- [last.fm - danyisill](https://last.fm/user/danyisill) " | markdownify}}
+</div>
+</div>
+
+<script>
+	//{{ "## jfl" | markdownify }}
+	function scale(n){
+		document.querySelector("#ness").style.height = 22 * n + "px"
+		document.querySelector("#ness").style.bottom = 140 * n + "px"
+		document.querySelector("#ness").style.right = 186 * n + "px"
+		//document.querySelector("#na").style.bottom = 20 * n + "px"
+		document.body.style.backgroundSize = 759 * n + "px"
+	}
+	scale(Math.ceil(document.body.clientHeight / 759) + 1);
+	var cur;
+	document.querySelectorAll("#na a").forEach(e => {
+		e.addEventListener("click", () => {
+			if(cur){
+				cur.classList.remove("selected");
+				document.getElementById(cur.textContent.split(" ")[0].toLowerCase()).style.display = "none"
+				document.getElementById(cur.textContent.split(" ")[0].toLowerCase()).dataset.open = false;
+				if(cur == e){
+					cur = false;
+					return;
+				}
+			}
+			e.classList.add("selected");
+			document.getElementById(e.textContent.split(" ")[0].toLowerCase()).style.display = "block";
+			document.getElementById(e.textContent.split(" ")[0].toLowerCase()).dataset.open = true;
+			cur = e;
+		})
+	})
+	Array.from(document.querySelectorAll(".sub")).filter(e => e.children.length > 1).map(e => e.querySelectorAll('a[href="#"')).forEach(d => {
+		d.forEach((e, n) => {
+			if (n == 0){
+				e.parentNode.parentNode.style.display = "flex";
+			} else {
+				e.parentNode.parentNode.style.display = "none";
+			}
+			e.addEventListener("click", () => {
+				let ul = e.parentNode.parentNode;
+				ul.style.display = "none";
+				if(ul.nextElementSibling)
+					ul.nextElementSibling.style.display = "flex";
+				else
+					ul.parentNode.firstElementChild.style.display = "flex"
+			})
+		})
+	})
+	document.addEventListener("keydown", e => {
+		({
+			"Escape": () => {
+				let o = document.querySelector(".sub[data-open='true']");
+				if(o){
+					o.style.display = "none";
+					o.dataset.open = false;
+				} else{
+					cur.classList.remove("selected");
+				}
+				//document.getElementById(cur.textContent.split(" ")[0].toLowerCase()).style.display = "none"
+			},
+			"ArrowDown": () => cur.nextElementSibling.click(),
+			"ArrowUp": () => cur.previousElementSibling.click()
+		}[e.code])()
+	})
+</script>
+</body>
+</html>

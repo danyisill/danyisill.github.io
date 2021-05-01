@@ -1,0 +1,212 @@
+@font-face {
+	font-family: "Apple Kid";
+	src: url(/img/apple_kid.otf);
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html{
+	height: 100%
+}
+#ness{
+	position: absolute;
+}
+.box{
+	position: absolute;
+	image-rendering: pixelated;
+	background-color: black;
+	border: 15px solid;
+	border-radius: 30px;
+	border-image: url(/img/box2.png) 16 round;
+	color: white;
+}
+.selected{
+	position: relative;
+}
+ul a{
+	color: #FF00FF
+}
+#equip ul li:first-child, #psi ul li:first-child, #talk ul:first-child li:first-child, #goods ul li:first-child{
+	width: 100%;
+}
+@media (orientation: landscape){
+body{
+	background-image: url(/img/fourside.png);
+	background-size: 759px;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	image-rendering: pixelated;
+	height: 100%;
+	font-family: "Apple Kid";
+	font-size: 5vmin;
+}
+.sub{
+	width: 80vmin;
+	height: 22vmin;
+	top: 4vmin;
+	left: 33vmin;
+	display: none
+}
+#money{
+	width: 14vmin;
+	top: 34vmin;
+	text-align: right;
+	padding: 2vmin
+}
+#money img{
+	height: 3vmin
+}
+#rootb{
+	width: 130vmin;
+	height: 100vmin;
+	background: transparent;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+#na a{
+	color: white;
+	text-decoration: none;
+	min-height: 26%;
+	margin: 0 1vmin
+}
+.selected:before{
+	content: "";
+	position: absolute;
+	left: -2vmin;
+	background: url("/img/ptr.gif");
+	width: 2vmin;
+	height: 3vmin;
+	top: 0.4vmin;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+ul li{
+	display: inline-block;
+	min-width: 40%;
+	min-height: 5vmin
+}
+#status ul li:nth-child(even){
+	min-width: 62%
+}
+#status ul li{
+	min-width: 20%
+}
+ul, #na{	
+	padding: 1vmin 3vmin;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-around;
+}
+#na{
+	width: 29vmin;
+	height: 20vmin;
+	left: 0vmin;
+	top: 4vmin;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-content: space-between
+}
+}
+@media (orientation: portrait){
+body{
+	background-image: url(/img/fourside.png);
+	background-size: 759px;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	image-rendering: pixelated;
+	height: 100%;
+	font-family: "Apple Kid";
+	font-size: 10vw;
+}
+#na{
+	width: 50vw;
+	height: 30vw;
+	left: 0vw;
+	top: 4vw;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-content: space-between
+}
+#na a{
+	color: white;
+	text-decoration: none;
+	min-height: 26%;
+	margin: 0 1vw
+}
+.sub{
+	width: 80vmin;
+	height: 56vmin;
+	top: 36vmin;
+	left: 0;
+	display: none;
+	font-size: 8vmin;
+}
+ul, #na{	
+	padding: 1vmin 3vmin;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-around;
+}
+#money{
+	width: 14vmin;
+	top: 43vmin;
+	text-align: right;
+	padding: 2vmin
+}
+#money img{
+	height: 5vmin
+}
+#rootb{
+	width: 80vmin;
+	height: 100vmin;
+	background: transparent;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 5vmin
+}
+.selected:before{
+	content: "";
+	position: absolute;
+	left: -3vmin;
+	background: url("/img/ptr.gif");
+	width: 4vmin;
+	height: 5vmin;
+	top: 1vmin;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+ul li{
+	display: inline-block;
+	min-width: 50%;
+	min-height: 5vmin
+}
+#status li:nth-child(1){order: 1}
+#status li:nth-child(3){order: 2}
+#status li:nth-child(5){order: 3}
+#status li:nth-child(2){order: 4}
+#status li:nth-child(4){order: 5}
+#status li:nth-child(6){order: 6}
+#status li:nth-child(7){order: 7}
+}

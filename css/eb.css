@@ -42,10 +42,10 @@ html{
 ul a{
 	color: #FF00FF
 }
-#equip ul li:first-child, #psi ul li:first-child, #talk ul:first-child li:first-child, #goods ul li:first-child{
-	width: 100%;
+a:not([href]){
+	cursor: pointer;
+	user-select: none;
 }
-@media (orientation: landscape){
 body{
 	background-image: url(/img/fourside.png);
 	background-size: 759px;
@@ -54,6 +54,18 @@ body{
 	image-rendering: pixelated;
 	height: 100%;
 	font-family: "Apple Kid";
+}
+ul, #na{	
+	padding: 1vmin 3vmin;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-around;
+}
+
+
+@media (orientation: landscape){
+body{
 	font-size: 5vmin;
 }
 .sub{
@@ -109,13 +121,6 @@ ul li{
 #status ul li{
 	min-width: 20%
 }
-ul, #na{	
-	padding: 1vmin 3vmin;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-content: space-around;
-}
 #na{
 	width: 29vmin;
 	height: 20vmin;
@@ -126,15 +131,13 @@ ul, #na{
 	align-content: space-between
 }
 }
+
+
+
+
+
 @media (orientation: portrait){
 body{
-	background-image: url(/img/fourside.png);
-	background-size: 759px;
-	background-position: bottom right;
-	background-repeat: no-repeat;
-	image-rendering: pixelated;
-	height: 100%;
-	font-family: "Apple Kid";
 	font-size: 10vw;
 }
 #na{
@@ -154,37 +157,29 @@ body{
 }
 .sub{
 	width: 80vmin;
-	height: 56vmin;
 	top: 36vmin;
 	left: 0;
 	display: none;
-	font-size: 8vmin;
-}
-ul, #na{	
-	padding: 1vmin 3vmin;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-content: space-around;
 }
 #money{
 	width: 14vmin;
 	top: 43vmin;
 	text-align: right;
-	padding: 2vmin
+	padding: 2vmin;
+	user-select: none;
 }
 #money img{
 	height: 5vmin
 }
 #rootb{
-	width: 80vmin;
+	width: 82vmin;
 	height: 100vmin;
 	background: transparent;
 	position: absolute;
 	left: 0;
 	right: 0;
 	margin: auto;
-	top: 5vmin
+	top: 10vmin
 }
 .selected:before{
 	content: "";
@@ -202,6 +197,9 @@ ul li{
 	min-width: 50%;
 	min-height: 5vmin
 }
+ul{
+	padding-bottom: auto
+}
 #status li:nth-child(1){order: 1}
 #status li:nth-child(3){order: 2}
 #status li:nth-child(5){order: 3}
@@ -209,4 +207,18 @@ ul li{
 #status li:nth-child(4){order: 5}
 #status li:nth-child(6){order: 6}
 #status li:nth-child(7){order: 7}
+}
+
+
+.sub ul{
+	display: none;
+}
+.sub .pgo{
+	display: flex;
+}
+.so{
+	display: block;
+}
+.title{
+	width: 100%
 }

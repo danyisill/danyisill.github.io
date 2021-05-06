@@ -11,18 +11,17 @@
 		<img src="/img/$.png">
 	</div>
 	<div class="box" id="na">
-{{ "[Talk to](#) 
-[PSI](#) [Check](#) [Goods](#) [Equip](#) [Status](#)" | markdownify | remove: '<p>' | remove: '</p>' }}
+		{{
+			"[Talk to]() [PSI]() [Check]() [Goods]() [Equip]() [Status]()" | markdownify | remove: '<p>' | remove: '</p>' 
+		}}
 	</div>
 	<div class="box sub" id="talk">
-{{ "- My Interests:
+{{ "- # My Interests:
 - Furry
 - Postmodernism
 - Synthetic Drugs
 - Continental Philosophy
 - Communism
-- [\>\>](#)
-^
 - Cooking
 - Pharmacology
 - Brutalist Architecture
@@ -30,35 +29,27 @@
 - Extreme Music
 - Feminism
 - Linguistics
-- [\>\>](#)
-^
 - Open Source Software
 - Plan 9, suckless
 - Mathematics
 - Tetris
 - TF2
-- Geography, climate
-- 
-- [\>\>](#)" | markdownify }}
+- Geography, climate" | markdownify }}
 	</div>
 	<div class="box sub" id="goods">
-{{ "- Projects:
+{{ "- # Projects:
 - [Simp'O'Matic, a multipurpose Discord bot](https://github.com/Demonstrandum/Simp-O-Matic)
 - [EasyRPG .app bundles](ez)
 - [Lovejoy Programming Language](https://lovejoy-lang.github.io/)
-- 
-- [\>\>](#)
-^
-- Inventory:
+- # Inventory:
 - Bag of meth
 - iPhone 6s 16gb
 - Nintendo DSi
 - Karelia Filtro
-- Monster Energy Mango Loco
-- [\>\>](#)" | markdownify}}
+- Monster Energy Mango Loco" | markdownify}}
 	</div>
 	<div class="box sub" id="psi">
-{{ "- My Mental Illnesses:
+{{ "- # My Mental Illnesses:
 - Schizoid Personality Disorder
 - ADHD
 - Drug Addiction
@@ -74,10 +65,11 @@
 - Pronouns: he/him, they/them
 - Sexuality: asexual
 - I Live In: Athens, Attica, Greece
-- Romantic Orientation: demiromantic" | markdownify }}
+- Romantic Orientation: demiromantic
+" | markdownify }}
 	</div>
 	<div class="box sub" id="equip">
-{{ "- Languages Spoken:
+{{ "- # Languages Spoken:
 - English: idk
 - Russian: N
 - Greek: B1
@@ -97,65 +89,81 @@
 </div>
 
 <script>
-	//{{ "## jfl" | markdownify }}
 	function scale(n){
 		document.querySelector("#ness").style.height = 22 * n + "px"
 		document.querySelector("#ness").style.bottom = 140 * n + "px"
 		document.querySelector("#ness").style.right = 186 * n + "px"
-		//document.querySelector("#na").style.bottom = 20 * n + "px"
 		document.body.style.backgroundSize = 759 * n + "px"
 	}
 	scale(Math.ceil(document.body.clientHeight / 759) + 1);
-	var cur;
+	
+	document.querySelector("#na a:first-child").classList.add("selected");
 	document.querySelectorAll("#na a").forEach(e => {
+		e.removeAttribute("href")
 		e.addEventListener("click", () => {
+			let cur = document.querySelector(".so");
+			let nxt = document.getElementById(e.textContent.split(" ")[0].toLowerCase());
 			if(cur){
-				cur.classList.remove("selected");
-				document.getElementById(cur.textContent.split(" ")[0].toLowerCase()).style.display = "none"
-				document.getElementById(cur.textContent.split(" ")[0].toLowerCase()).dataset.open = false;
-				if(cur == e){
-					cur = false;
-					return;
-				}
+				cur.classList.remove("so")
 			}
-			e.classList.add("selected");
-			document.getElementById(e.textContent.split(" ")[0].toLowerCase()).style.display = "block";
-			document.getElementById(e.textContent.split(" ")[0].toLowerCase()).dataset.open = true;
-			cur = e;
+			if(cur != nxt){
+				document.querySelector(".selected").className = "";
+				e.classList.add("selected")
+				nxt.classList.add("so")
+			}
 		})
 	})
-	Array.from(document.querySelectorAll(".sub")).filter(e => e.children.length > 1).map(e => e.querySelectorAll('a[href="#"')).forEach(d => {
-		d.forEach((e, n) => {
-			if (n == 0){
-				e.parentNode.parentNode.style.display = "flex";
-			} else {
-				e.parentNode.parentNode.style.display = "none";
+	document.querySelectorAll("ul h1").forEach(e => e.parentElement.classList.add("title"))
+
+	const nitems = window.matchMedia("(orientation: portrait)").matches ? 8 : 8
+
+	document.querySelectorAll(".sub").forEach(e => {
+		var ul = [document.createElement("ul")];
+		ul[0].className = "pgo";
+		[...e.firstElementChild.children].reduce((a, v, i) => {
+			if(v.className.includes("title") || v.textContent.length > 39)
+				a += 1;
+			a += 1;
+			if(a % nitems == 0 && v.nextElementSibling){
+				let li = document.createElement("li");
+				li.textContent = ">>";
+				ul[Math.floor(i / nitems)].append(li)
+				ul.push(document.createElement("ul"))
+				a += 1;
 			}
-			e.addEventListener("click", () => {
-				let ul = e.parentNode.parentNode;
-				ul.style.display = "none";
-				if(ul.nextElementSibling)
-					ul.nextElementSibling.style.display = "flex";
-				else
-					ul.parentNode.firstElementChild.style.display = "flex"
-			})
+			(ul[Math.floor(a / nitems)] || ul[Math.floor(a / nitems) - 1]).appendChild(v);
+			return a;
+		}, 0)
+
+		e.firstElementChild.remove()
+		e.append(...ul)
+
+		e.addEventListener("click", f => {
+			if(f.target.href)
+				return;
+			let prev = e.querySelector('.pgo');
+			prev.classList.remove("pgo");
+			if(prev.nextElementSibling)
+				prev.nextElementSibling.classList.add("pgo");
+			else
+				e.firstElementChild.classList.add("pgo");
 		})
 	})
+
 	document.addEventListener("keydown", e => {
-		({
-			"Escape": () => {
-				let o = document.querySelector(".sub[data-open='true']");
-				if(o){
-					o.style.display = "none";
-					o.dataset.open = false;
-				} else{
-					cur.classList.remove("selected");
-				}
-				//document.getElementById(cur.textContent.split(" ")[0].toLowerCase()).style.display = "none"
-			},
-			"ArrowDown": () => cur.nextElementSibling.click(),
-			"ArrowUp": () => cur.previousElementSibling.click()
-		}[e.code])()
+		switch(e.code){
+			case "ArrowDown":
+			(document.querySelector(".selected").nextElementSibling || document.querySelector("#na a")).click();
+			break;
+			case "ArrowUp":
+			(document.querySelector(".selected").previousElementSibling || document.querySelector("#na").lastElementChild).click();
+			break;
+			case "ArrowLeft":
+			case "ArrowRight":
+			case "Escape":
+			case "Enter":
+			document.querySelector(".selected").click()
+		}
 	})
 </script>
 </body>

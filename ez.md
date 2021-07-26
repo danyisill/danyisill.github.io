@@ -4,6 +4,9 @@ title: EasyRPG wrappers for Mac
 permalink: /ez/
 ---
 # EasyRPG version: 0.6.1
+
+Note: these packages are outdated and do not include the latest bugfixes and enhancements from [EasyRPG Player!](https://easyrpg.org/player/downloads/#release-macos) Go to [easyrpg.org](https://easyrpg.org) and download the latest macOS app bundle and select your games from it. If you'd like to have a .app bundle for each game, you can still download them from the links below and rename Contents/MacOS/EasyRPG Player file to easyrpg-player and replace it within that app bundle.
+
 - Yume Nikki
   - v0.04 ja: {% include r.md l="ja-Yume.Nikki.0.04" %}
   - v0.06 ja: {% include r.md l="ja-Yume.Nikki.0.06" %}

@@ -38,7 +38,7 @@ title: danyisill.github.io
 - [RateYourMusic - ~mudkip77](https://rateyourmusic.com/~mudkip77)
 - [Reddit - danyisill](https://old.reddit.com/u/danyisill)
 - [Twitter - danyisill](https://twitter.com/danyisill)
-- [Discord - Dannums#1071](#discord)
+- [Discord - dannus#4317](#https://discordapp.com/users/887060525131911190)
 - [GitHub - danyisill](https://github.com/danyisill)
 - [Telegram - @p_9_6](https://t.me/p_9_6)
 - [FurAffinity - danyisill](https://furaffinity.net/user/danyisill)

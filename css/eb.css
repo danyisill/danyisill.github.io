@@ -134,8 +134,8 @@ ul li{
 lastfm-tracks {
 	box-sizing: border-box;
 	border: 1px solid #000;
-	width: 29vmin;
-	height: 80vmin;
+	width: 29vmin !important;
+	height: 40vmin;
 	
 	background-color: black;
 	border: 15px solid;
@@ -232,7 +232,7 @@ lastfm-tracks {
 	box-sizing: border-box;
 	border: 1px solid #000;
 	width: 29vmin;
-	height: 80vmin;
+	height: 50vmin;
 
 	background-color: black;
 	border: 15px solid;

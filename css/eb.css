@@ -201,6 +201,14 @@ ul li{
 ul{
 	padding-bottom: auto
 }
+lastfm-tracks {
+	box-sizing: border-box;
+	width: 42vmin !important;
+	height: 55vmin !important;
+}
+#lastfm{
+	top: 88vmin;
+}
 }
 
 
@@ -219,13 +227,4 @@ ul{
 
 #money{
 	display: none;
-}
-
-lastfm-tracks {
-	box-sizing: border-box;
-	width: 29vmin;
-	height: 50vmin;
-
-	background-color: black;
-	color: white;
 }

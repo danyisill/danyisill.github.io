@@ -1,4 +1,4 @@
-xf<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>{{ page.title }}</title>
@@ -9,14 +9,13 @@ xf<!DOCTYPE html>
 <div id="rootc">
 	{{ content }}
 	<div class="box" id="lastfm">
-		<a href="https://last.fm/user/danyisill">
-			<img src="https://www.ballix.net/whatsplaying/widget?user=danyisill">
-		</a>
+		<lastfm-tracks user="danyisill" apikey="e15f1f8b65837cc3866c8289d1a1755d" interval="60" tracks="100" class="dynaheader"></lastfm-tracks>
 	</div>
 	<div class="box" id="money">
 		<img src="/img/$.png">
 	</div>
 </div>
+<script src="lastfm.js" type="module"></script>
 <script>
 	function scale(n){
 		document.querySelector("#ness").style.height = 22 * n + "px"

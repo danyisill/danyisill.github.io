@@ -39,7 +39,7 @@ title: danyisill.github.io
 - [Twitter - danyisill](https://twitter.com/danyisill)
 - [Discord - dannv3.0_53295](https://discordapp.com/users/1369657496654053408)
 - [FurAffinity - danyisill](https://furaffinity.net/user/danyisill)
-- [GitHub - UwU-OwO-UwU](https://github.com/UwU-OwO-UwU)
+- [GitHub - danyisill](https://github.com/danyisill)
 - [last.fm - danyisill](https://last.fm/user/danyisill)
 - [RateYourMusic - ~mudkip77](https://rateyourmusic.com/~mudkip77)
 ^

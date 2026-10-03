@@ -133,15 +133,8 @@ ul li{
 
 lastfm-tracks {
 	box-sizing: border-box;
-	border: 1px solid #000;
-	width: 29vmin !important;
-	height: 40vmin;
-	
-	background-color: black;
-	border: 15px solid;
-	border-radius: 30px;
-	border-image: url(/img/box2.png) 16 round;
-	color: white;
+	width: 42vmin !important;
+	height: 55vmin !important;
 }
 
 }
@@ -230,13 +223,9 @@ ul{
 
 lastfm-tracks {
 	box-sizing: border-box;
-	border: 1px solid #000;
 	width: 29vmin;
 	height: 50vmin;
 
 	background-color: black;
-	border: 15px solid;
-	border-radius: 30px;
-	border-image: url(/img/box2.png) 16 round;
 	color: white;
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+xf<!DOCTYPE html>
 <html>
 <head>
 	<title>{{ page.title }}</title>
@@ -8,6 +8,11 @@
 <img src="/img/ness4.png" id="ness">
 <div id="rootc">
 	{{ content }}
+	<div class="box" id="lastfm">
+		<a href="https://last.fm/user/danyisill">
+			<img src="https://www.ballix.net/whatsplaying/widget?user=danyisill">
+		</a>
+	</div>
 	<div class="box" id="money">
 		<img src="/img/$.png">
 	</div>
@@ -26,7 +31,8 @@
 		e.removeAttribute("href");
 		e.addEventListener("click", () => {
 			let cur = document.querySelector(".so");
-			let nxt = document.getElementById("rootc").children[i + 2];
+			let panels = document.querySelectorAll("#rootc > div.sub");
+			let nxt = panels[i];
 			if(cur){
 				cur.classList.remove("so")
 			}

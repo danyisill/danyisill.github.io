@@ -83,12 +83,15 @@ body{
 }
 #money{
 	width: 14vmin;
-	top: 34vmin;
+	calc(226px + 36vmin);
 	text-align: right;
 	padding: 2vmin
 }
 #money img{
-	height: 3vmin
+	height: 3vmin;
+}
+#lastfm{
+	top: 35vmin;
 }
 #rootb, #rootc{
 	width: 130vmin;
@@ -115,14 +118,8 @@ body{
 }
 ul li{
 	display: inline-block;
-	min-width: 41%;
+	min-width: 40%;
 	min-height: 5vmin
-}
-#rootc > div:nth-of-type(7) ul li:nth-child(even){
-	min-width: 62%
-}
-#rootc > div:nth-of-type(7) ul li{
-	min-width: 20%
 }
 #rootc > p{
 	width: 29vmin;
@@ -160,13 +157,16 @@ body{
 }
 #money{
 	width: 14vmin;
-	top: 43vmin;
+	top: calc(226px + 51vmin);
 	text-align: right;
 	padding: 2vmin;
 	user-select: none;
 }
 #money img{
 	height: 5vmin
+}
+#lastfm{
+	top: 49vmin;
 }
 #rootc{
 	width: 82vmin;
@@ -197,13 +197,6 @@ ul li{
 ul{
 	padding-bottom: auto
 }
-#rootc > div:nth-of-type(7) li:nth-child(1){order: 1}
-#rootc > div:nth-of-type(7) li:nth-child(3){order: 2}
-#rootc > div:nth-of-type(7) li:nth-child(5){order: 3}
-#rootc > div:nth-of-type(7) li:nth-child(2){order: 4}
-#rootc > div:nth-of-type(7) li:nth-child(4){order: 5}
-#rootc > div:nth-of-type(7) li:nth-child(6){order: 6}
-#rootc > div:nth-of-type(7) li:nth-child(7){order: 7}
 }
 
 
@@ -218,4 +211,8 @@ ul{
 }
 .title{
 	width: 100%
+}
+
+#money{
+	display: none;
 }

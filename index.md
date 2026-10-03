@@ -8,16 +8,16 @@ title: danyisill.github.io
 [Talk to]() [PSI]() [Check]() [Goods]() [Equip]() [Status]()
 
 - # My Interests:
+- Continental Philosophy
 - Furry
 - Postmodernism
 - Synthetic Drugs
-- Continental Philosophy
 - Communism
 - Cooking
 - Pharmacology
 - Brutalist Architecture
 - Research Chemicals
-- Extreme Music
+- Noise Music
 - Feminism
 - Linguistics
 - Open Source Software
@@ -29,42 +29,42 @@ title: danyisill.github.io
 ^
 - # My Mental Illnesses:
 - Schizoid Personality Disorder
-- ADHD
-- Drug Addiction
+- ADD
+- Recurrent depression
 - DP/DR
-- PTSD
+- CPTSD
 - Visual Snow
 ^
-- [RateYourMusic - ~mudkip77](https://rateyourmusic.com/~mudkip77)
-- [Reddit - danyisill](https://old.reddit.com/u/danyisill)
+- [Reddit - throwawayylmfaowo](https://old.reddit.com/u/throwawayylmfaowo)
 - [Twitter - danyisill](https://twitter.com/danyisill)
-- [Discord - dannus#4317](https://discordapp.com/users/887060525131911190)
-- [GitHub - danyisill](https://github.com/danyisill)
-- [Telegram - @p_9_6](https://t.me/p_9_6)
+- [Discord - dannv3.0_53295](https://discordapp.com/users/1369657496654053408)
 - [FurAffinity - danyisill](https://furaffinity.net/user/danyisill)
+- [GitHub - UwU-OwO-UwU](https://github.com/UwU-OwO-UwU)
 - [last.fm - danyisill](https://last.fm/user/danyisill)
+- [RateYourMusic - ~mudkip77](https://rateyourmusic.com/~mudkip77)
 ^
 - # Projects:
 - [Simp'O'Matic, a multipurpose Discord bot](https://github.com/Demonstrandum/Simp-O-Matic)
 - [EasyRPG .app bundles](ez)
 - [Lovejoy Programming Language](https://lovejoy-lang.github.io/)
 - # Inventory:
-- Bag of meth
-- iPhone 8 16gb
-- Nintendo DSi
+- Root Beer
+- iPhone XS Max
+- Nintendo DSi LL
 - Karelia Filtro
-- Monster Energy Mango Loco
+- Perrier
 ^
 - # Languages Spoken:
-- English: idk
+- English: C2
 - Russian: N
 - Greek: B1
-- Spanish: A1
+- Spanish: A2
+- French: A1
 ^
-- Age: 19
-- Gender: agender/genderfluid male
-- Horoscope: Leo
 - Pronouns: he/him, they/them
-- Sexuality: asexual
-- I Live In: Athens, Attica, Greece
-- Romantic Orientation: demiromantic
+- Age: 23
+- Gender: genderfluid male
+- Horoscope: Leo
+- I Live In: Paris
+- Sexuality: autosexual
+- Romantic Orientation: frayromantic

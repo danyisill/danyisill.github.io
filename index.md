@@ -62,7 +62,7 @@ title: danyisill.github.io
 - French: A1
 ^
 - Pronouns: he/him, they/them
-- Age: 23
+- Age: 24
 - Gender: genderfluid male
 - Horoscope: Leo
 - I Live In: Paris
